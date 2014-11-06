@@ -6,7 +6,6 @@ import org.springframework.context.ApplicationContext
 import org.springframework.stereotype.Service
 
 /**
- * Created by michal on 04.11.14.
  */
 @Service
 class AkkaService {
