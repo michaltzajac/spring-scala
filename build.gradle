@@ -7,12 +7,14 @@ buildscript {
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath("com.github.maiflai:gradle-scalatest:0.4")
     }
 }
 
 apply plugin: 'java'
 apply plugin: 'scala'
 apply plugin: 'spring-boot'
+apply plugin: 'scalatest'
 
 jar {
     baseName = 'spring-scala'
@@ -34,7 +36,7 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-actuator")
 
     //scala
-    compile("org.scala-lang:scala-library:2.11.2")
+    compile("org.scala-lang:scala-library:2.11.4")
 
     //akka
     compile("com.typesafe.akka:akka-actor_2.11:$akkaVersion")
@@ -43,6 +45,8 @@ dependencies {
     //tests
     testCompile("org.springframework.boot:spring-boot-starter-test")
     testCompile("org.scalatest:scalatest_2.11:2.2.1")
+    testRuntime("org.pegdown:pegdown:1.1.0")
+    
 }
 
 task wrapper(type: Wrapper) {
