@@ -17,6 +17,6 @@ class HelloWorldController extends AppLogging {
   def readMessage(@RequestBody message: MessageContainer) = {
 
     info("Received message: {}", message.getMessage)
-    new MessageContainer("Received message: " + message.getMessage())
+    new MessageContainer("Received message: " + message.getMessage)
   }
 }

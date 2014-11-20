@@ -1,6 +1,8 @@
 package michalz.springscala.akka
 
 import michalz.springscala.ApplicationConfig
+import org.junit.runner.RunWith
+import org.scalatest.junit.{JUnitRunner, JUnitSuite}
 import org.scalatest.{FunSuite, Matchers}
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.SpringApplicationConfiguration
@@ -16,6 +18,7 @@ import org.springframework.test.context.support.AnnotationConfigContextLoader
 //  loader = classOf[AnnotationConfigContextLoader]
 //)
 @SpringApplicationConfiguration(classes = Array(classOf[ApplicationConfig]))
+@RunWith(classOf[JUnitRunner])
 class AkkaServiceTest extends FunSuite with Matchers {
   
   @Autowired val akkaService: AkkaService = null
