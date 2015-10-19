@@ -13,10 +13,6 @@ import org.springframework.test.context.support.AnnotationConfigContextLoader
  * @author mzajac
  * @since 2014.11.06
  */
-//@ContextConfiguration(
-//  classes = Array(classOf[ApplicationConfig]),
-//  loader = classOf[AnnotationConfigContextLoader]
-//)
 @SpringApplicationConfiguration(classes = Array(classOf[ApplicationConfig]))
 @RunWith(classOf[JUnitRunner])
 class AkkaServiceTest extends FunSuite with Matchers {

@@ -7,14 +7,12 @@ buildscript {
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-        classpath("com.github.maiflai:gradle-scalatest:0.4")
     }
 }
 
 apply plugin: 'java'
 apply plugin: 'scala'
 apply plugin: 'spring-boot'
-apply plugin: 'scalatest'
 
 jar {
     baseName = 'spring-scala'
@@ -45,8 +43,6 @@ dependencies {
     //tests
     testCompile("org.springframework.boot:spring-boot-starter-test")
     testCompile("org.scalatest:scalatest_2.11:2.2.1")
-    testRuntime("org.pegdown:pegdown:1.1.0")
-    
 }
 
 task wrapper(type: Wrapper) {
